@@ -1,0 +1,10 @@
+.home {
+  display: grid;
+  grid-template-columns: .5fr [grid-start] repeat(4, 1fr) [grid-end] .5fr;
+  grid-template-rows: 1fr [social-media-start] 1fr [social-media-end] 1fr 1fr 1fr;
+  grid-gap: 3rem;
+
+  min-height: 100vh;
+  width: 140rem;
+  background-color: #42b983;
+}

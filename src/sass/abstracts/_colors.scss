@@ -1,0 +1,27 @@
+//-- Light Theme --//
+$color-light_toggle: hsl(230, 22%, 74%);
+$color-light-white_bg: hsl(0, 0%, 100%);
+$color-light-very-pale-blue_topBg: hsl(225, 100%, 98%);
+$color-light-grayish-blue_cardBg: hsl(227, 47%, 96%);
+$color-dark-grayish-blue_text: hsl(228, 12%, 44%);
+$color-very-dark-blue_text: hsl(230, 17%, 14%);
+
+//-- Dark Theme --//
+$color-dark-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%); //toggle button
+$color-dark-very-dark-blue_bg: hsl(230, 17%, 14%); // background
+$color-dark-very-dark-blue_topBg: hsl(232, 19%, 15%);
+$color-dark-dark-desaturated_blue_cardBg: hsl(228, 28%, 20%);
+$color-dark-desaturated-blue_text: hsl(228, 34%, 66%);
+$color-dark-white_text: hsl(0, 0%, 100%);
+
+
+$color-text_red: #DC414C;
+
+//-- Primary --//
+$color-text_green: hsl(163, 72%, 41%);
+$color-text_red: hsl(356, 69%, 56%);
+
+$color-facebook: hsl(208, 92%, 53%);
+$color-twitter: hsl(203, 89%, 53%);
+$color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$color-youTube: hsl(348, 97%, 39%);

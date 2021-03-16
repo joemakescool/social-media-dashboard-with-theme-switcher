@@ -1,0 +1,114 @@
+
+
+.social-media-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: $color-light-grayish-blue_cardBg;
+
+  border-radius: .5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  overflow: hidden;
+
+  &--facebook {
+    grid-column: grid-start / span 1;
+    grid-row: social-media-start / social-media-end;
+    border-top: solid .5rem rgba($color-facebook, 1);
+  }
+
+
+  &--twitter {
+    grid-column: 3 / span 1;
+    grid-row: social-media-start / social-media-end;
+    border-top: solid .5rem rgba($color-twitter, 1);
+  }
+
+  &--instagram {
+    grid-column: 4 / span 1;
+    grid-row: social-media-start / social-media-end;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: .5rem;
+      z-index: 1;
+      background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    }
+  }
+
+  &--youTube {
+    grid-column: 5 / span 1;
+    grid-row: social-media-start / social-media-end;
+    border-top: solid .5rem rgba($color-youTube, .8);
+  }
+
+
+  &__top {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-image {
+
+  }
+
+  &__name {
+    color: $color-dark-grayish-blue_text;
+  }
+
+  &__media-followers-count {
+    font-size: 5rem;
+    font-weight: $font-weight-bold;
+    color: $color-very-dark-blue_text;
+  }
+
+  &__media-followers-text {
+    color: $color-dark-grayish-blue_text;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    letter-spacing: .5rem;
+    margin-right:-.5rem;
+  }
+
+  &__arrow--positive {
+
+  }
+
+  &__amount--positive {
+    color: $color-text_green;
+    font-weight: $font-weight-bold;
+  }
+
+  &__today--positive {
+    color: $color-text_green;
+    font-weight: $font-weight-bold;
+  }
+
+  &__amount--negative {
+    color: $color-text_red;
+    font-weight: $font-weight-bold;
+  }
+
+}
