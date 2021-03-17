@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <TheHeader></TheHeader>
 
     <SocialMediaCard class="social-media-card--facebook">
       <template v-slot:svg>
@@ -78,7 +79,7 @@
       </template>
 
       <template v-slot:description>
-        Subscribers
+        Followers
       </template>
 
       <template v-slot:arrow>
@@ -108,7 +109,7 @@
       </template>
 
       <template v-slot:description>
-        Followers
+        Subscribers
       </template>
 
       <template v-slot:arrow>
@@ -124,6 +125,16 @@
       </template>
     </SocialMediaCard>
 
+      <div class="overview-header">
+        <p>Overview - Today</p>
+      </div>
+
+    <div class="overview-grid">
+      <div class="overview-card">hello</div>
+    </div>
+
+
+
 
 
   </div>
@@ -132,11 +143,12 @@
 <script>
 // @ is an alias to /src
 import SocialMediaCard from "@/components/cards/SocialMediaCard";
+import TheHeader from "@/components/layout/TheHeader";
 
 export default {
   name: 'Home',
   components: {
-    SocialMediaCard
+    SocialMediaCard, TheHeader
   }
 }
 </script>

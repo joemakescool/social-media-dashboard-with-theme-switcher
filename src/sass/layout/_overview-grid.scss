@@ -1,0 +1,10 @@
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: .75fr .75fr;
+  grid-column-gap: 3rem;
+
+  grid-column: grid-start / grid-end;
+  grid-row: overview-grid-start / overview-grid-end;
+  background-color: #42b983;
+}

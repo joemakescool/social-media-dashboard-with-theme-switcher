@@ -1,0 +1,33 @@
+.toggle-box {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+
+
+  &__tool {
+    display: flex;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    width: 5.5rem;
+    height: 2.5rem;
+    border-radius: 100px;
+    justify-content: end;
+  }
+
+  &__label {
+    color: rgba($color-dark-grayish-blue_text, .6);
+    font-weight: $font-weight-bold;
+    align-self: center;
+  }
+
+
+  &__switch {
+    background-color: $color-light_toggle;
+    filter: drop-shadow(1px 1px 10px rgba($color-dark-dark-desaturated_blue_cardBg, .3));
+    clip-path: circle();
+    width: 50%;
+    height: 100%;
+
+  }
+}
