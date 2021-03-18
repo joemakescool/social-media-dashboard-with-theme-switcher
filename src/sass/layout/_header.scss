@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 
   &__title {
     color: $color-very-dark-blue_text;
@@ -20,8 +21,8 @@
 
 .header__background {
   position: absolute;
-  z-index: -10;
-  height: 25%;
+  z-index: 1;
+  height: 35%;
   width: 100%;
   background-color: $color-light-very-pale-blue_topBg;
 }

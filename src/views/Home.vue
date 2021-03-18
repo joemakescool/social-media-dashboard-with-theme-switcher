@@ -125,16 +125,7 @@
       </template>
     </SocialMediaCard>
 
-      <div class="overview-header">
-        <p>Overview - Today</p>
-      </div>
-
-    <div class="overview-grid">
-      <div class="overview-card">hello</div>
-    </div>
-
-
-
+    <TheOverviewGrid></TheOverviewGrid>
 
 
   </div>
@@ -144,11 +135,13 @@
 // @ is an alias to /src
 import SocialMediaCard from "@/components/cards/SocialMediaCard";
 import TheHeader from "@/components/layout/TheHeader";
+import TheOverviewGrid from "@/components/layout/TheOverviewGrid";
 
 export default {
   name: 'Home',
   components: {
-    SocialMediaCard, TheHeader
+    SocialMediaCard, TheHeader,
+    TheOverviewGrid
   }
 }
 </script>

@@ -8,7 +8,8 @@
     display: flex;
     padding-top: 3px;
     padding-bottom: 3px;
-    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    //background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    background-image: linear-gradient(to right, rgba($color-light_toggle, .9), rgba($color-dark-dark-desaturated_blue_cardBg, .5) );
     width: 5.5rem;
     height: 2.5rem;
     border-radius: 100px;
@@ -23,7 +24,7 @@
 
 
   &__switch {
-    background-color: $color-light_toggle;
+    background-color: rgba($color-light-very-pale-blue_topBg, 1);
     filter: drop-shadow(1px 1px 10px rgba($color-dark-dark-desaturated_blue_cardBg, .3));
     clip-path: circle();
     width: 50%;

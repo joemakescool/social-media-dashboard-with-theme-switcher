@@ -8,8 +8,9 @@
   justify-content: center;
   gap: 2rem;
   background-color: $color-light-grayish-blue_cardBg;
+  z-index: 10;
 
-  border-radius: .5rem;
+  border-radius: $card-border-radius;
   padding-top: 3rem;
   padding-bottom: 3rem;
   overflow: hidden;

@@ -1,10 +1,10 @@
 .overview-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: .75fr .75fr;
+  grid-template-columns: [card-grid-start] 1fr 1fr 1fr 1fr [card-grid-end];
+  grid-template-rows: [card-grid-top] min-content [card-grid-start] .75fr .75fr [card-grid-end];
   grid-column-gap: 3rem;
+  grid-row-gap: 1.5rem;
 
   grid-column: grid-start / grid-end;
   grid-row: overview-grid-start / overview-grid-end;
-  background-color: #42b983;
 }
