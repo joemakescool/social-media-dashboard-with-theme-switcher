@@ -1,5 +1,5 @@
 <template>
-  <div class="home" :class="{'dark': !this.$store.state.isLight}">
+  <div class="home">
     <TheHeader></TheHeader>
 
     <SocialMediaCard class="social-media-card--facebook">

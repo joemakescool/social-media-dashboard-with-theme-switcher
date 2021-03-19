@@ -1,5 +1,9 @@
 <template>
-  <div class="overview-card">
+  <transition
+      v-bind:css="false"
+      mode="out-in"
+  >
+  <div class="overview-card" >
 
     <div class="overview-card__top">
       <div class="overview-card__page-views"><p><slot name="description"></slot></p></div>
@@ -18,6 +22,7 @@
       </div>
     </div>
   </div>
+  </transition>
 
 </template>
 

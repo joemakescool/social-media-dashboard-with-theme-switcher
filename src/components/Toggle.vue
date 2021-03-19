@@ -39,12 +39,6 @@ export default {
     switchToggle() {
       this.isLight = !this.isLight
       this.$store.dispatch('changeLight', this.isLight)
-      const body = document.querySelector('body')
-      if (!this.isLight) {
-        body.classList.add('dark')
-      } else {
-        body.classList.remove('dark')
-      }
 
       if (this.isLight) {
         anime({
@@ -61,6 +55,39 @@ export default {
           easing: 'easeOutExpo'
         })
       }
+      this.animateCards()
+
+    },
+    animateCards() {
+      //const body = document.querySelector('body')
+
+      const timeline = anime.timeline({
+        duration: 500,
+        easing: 'easeOutExpo',
+      })
+
+      timeline.add({
+        targets: ['.overview-card, .social-media-card'],
+        rotate: [
+          {value: '-15deg'},
+          {value: '15deg'}
+        ],
+        // complete: function (anime) {
+        //   // if (!this.isLight) {
+        //   //   body.classList.add('dark')
+        //   // } else {
+        //   //   body.classList.remove('dark')
+        //   // }
+        // }
+
+      })
+
+      timeline.add({
+        targets: ['.overview-card, .social-media-card'],
+        rotate: [
+          {value: '-15deg'},
+        ]
+      })
 
     }
   }
