@@ -1,10 +1,11 @@
 //-- Light Theme --//
-$color-light_toggle: hsl(230, 22%, 74%);
+$color-light_togglez: hsl(230, 22%, 74%);
 $color-light-white_bg: hsl(0, 0%, 100%);
 $color-light-very-pale-blue_topBg: hsl(225, 100%, 98%);
 $color-light-grayish-blue_cardBg: hsl(227, 47%, 96%);
 $color-dark-grayish-blue_text: hsl(228, 12%, 44%);
 $color-very-dark-blue_text: hsl(230, 17%, 14%);
+
 
 //-- Dark Theme --//
 $color-dark-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%); //toggle button
@@ -15,8 +16,6 @@ $color-dark-desaturated-blue_text: hsl(228, 34%, 66%);
 $color-dark-white_text: hsl(0, 0%, 100%);
 
 
-$color-text_red: #DC414C;
-
 //-- Primary --//
 $color-text_green: hsl(163, 72%, 41%);
 $color-text_red: hsl(356, 69%, 56%);
@@ -26,3 +25,27 @@ $color-facebook: hsl(208, 92%, 53%);
 $color-twitter: hsl(203, 89%, 53%);
 $color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
 $color-youTube: hsl(348, 97%, 39%);
+
+$color-light_toggle: linear-gradient(to right, rgba($color-light_togglez, .9), rgba($color-dark-dark-desaturated_blue_cardBg, .5) );
+
+
+:root {
+  --card-background: #{$color-light-grayish-blue_cardBg};
+  --color-toggle: #{$color-light_toggle};
+  --color-background: #{$color-light-white_bg};
+  --color-top-background: #{$color-light-very-pale-blue_topBg};
+  --color-text-secondary: rgba(99, 104, 126, 1);
+  --color-text-main: #{$color-very-dark-blue_text};
+}
+
+@mixin theme-colors($dark-theme: true) {
+  @if $dark-theme {
+    --card-background: #{$color-dark-dark-desaturated_blue_cardBg};
+    --color-toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --color-background: #{$color-dark-very-dark-blue_bg};
+    --color-top-background: #{lighten($color-dark-very-dark-blue_topBg, 1%)};
+    --color-text-secondary: #{$color-dark-desaturated-blue_text};
+    --color-text-main: #{$color-dark-white_text};
+  }
+}
+

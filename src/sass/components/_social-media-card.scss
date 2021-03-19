@@ -1,5 +1,4 @@
 
-
 .social-media-card {
   position: relative;
   display: flex;
@@ -7,13 +6,15 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background-color: $color-light-grayish-blue_cardBg;
+  background-color: var(--card-background);
   z-index: 10;
 
   border-radius: $card-border-radius;
   padding-top: 3rem;
   padding-bottom: 3rem;
   overflow: hidden;
+
+  transition: all .5s;
 
   &--facebook {
     grid-column: grid-start / span 1;
@@ -76,17 +77,26 @@
   }
 
   &__name {
-    color: $color-dark-grayish-blue_text;
+    color: var(--color-text-secondary);
+    //color: $color-dark-desaturated-blue_text;
   }
 
   &__media-followers-count {
     font-size: 5rem;
     font-weight: $font-weight-bold;
-    color: $color-very-dark-blue_text;
+    color: var(--color-text-main);
+    //color: $color-dark-white_text;
+  }
+
+  &--dark {
+    &__media-followers-text {
+      color: rgba($color-dark-desaturated-blue_text, .7);
+      background-color: #DC414C;
+    }
   }
 
   &__media-followers-text {
-    color: $color-dark-grayish-blue_text;
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     font-weight: $font-weight-normal;
     letter-spacing: .5rem;

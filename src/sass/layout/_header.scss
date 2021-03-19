@@ -7,13 +7,13 @@
   z-index: 2;
 
   &__title {
-    color: $color-very-dark-blue_text;
+    color: var(--color-text-main);
     font-weight: $font-weight-bold;
     font-size: 3rem;
   }
 
   &__subtitle {
-    color: $color-dark-grayish-blue_text;
+    color: var(--color-text-secondary);
     font-weight: $font-weight-bold;
   }
 
@@ -24,6 +24,9 @@
   z-index: 1;
   height: 35%;
   width: 100%;
-  background-color: $color-light-very-pale-blue_topBg;
+  transition: all .5s;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: var(--color-top-background);
 }
 

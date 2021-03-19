@@ -4,9 +4,10 @@
   justify-content: center;
   gap: 1.5rem;
 
-  background-color: $color-light-grayish-blue_cardBg;
+  background-color: var(--card-background);
   padding: 2.5rem 2rem;
   border-radius: $card-border-radius;
+  transition: all .5s;
 
   &--facebook-views {
     grid-column: card-grid-start / span 1;
@@ -54,7 +55,7 @@
   }
 
   &__page-views {
-    color: $color-dark-grayish-blue_text;
+    color: var(--color-text-secondary);
     font-weight: $font-weight-bold;
     align-self: center;
   }
@@ -70,6 +71,7 @@
 
   &__count {
     font-weight: $font-weight-bold;
+    color: var(--color-text-main);
     font-size: 3rem;
     transform: translateY(5px);
   }

@@ -2,6 +2,7 @@
   display: flex;
   gap: 1rem;
   cursor: pointer;
+  transition: all .5s;
 
 
   &__tool {
@@ -9,7 +10,7 @@
     padding-top: 3px;
     padding-bottom: 3px;
     //background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    background-image: linear-gradient(to right, rgba($color-light_toggle, .9), rgba($color-dark-dark-desaturated_blue_cardBg, .5) );
+    background-image: var(--color-toggle);
     width: 5.5rem;
     height: 2.5rem;
     border-radius: 100px;

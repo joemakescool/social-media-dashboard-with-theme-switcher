@@ -1,0 +1,8 @@
+@mixin toggle-text-color() {
+  .toggle-box__label {
+    color: rgba($color-dark-grayish-blue_text, 1)
+  }
+  .overview-header {
+    color: var(--color-text-main)
+  }
+}

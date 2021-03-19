@@ -5,6 +5,8 @@
   grid-template-rows: min-content min-content [social-media-start] 1fr [social-media-end overview-grid-start] min-content [card-grid-start] min-content [card-grid-end overview-grid-end];
   grid-column-gap: 3rem;
   grid-row-gap: 4rem;
+  background-color: var(--color-background);
+  transition: all .5s;
 
   width: 140rem;
 }

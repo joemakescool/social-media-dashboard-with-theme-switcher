@@ -39,6 +39,12 @@ export default {
     switchToggle() {
       this.isLight = !this.isLight
       this.$store.dispatch('changeLight', this.isLight)
+      const body = document.querySelector('body')
+      if (!this.isLight) {
+        body.classList.add('dark')
+      } else {
+        body.classList.remove('dark')
+      }
 
       if (this.isLight) {
         anime({
