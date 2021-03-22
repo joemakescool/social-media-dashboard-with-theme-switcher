@@ -12,6 +12,7 @@
 
 <script>
 import anime from 'animejs/lib/anime.es.js';
+import gsap from "gsap";
 
 export default {
   name: "Toggle",
@@ -59,36 +60,55 @@ export default {
 
     },
     animateCards() {
-      //const body = document.querySelector('body')
+      let timeline = gsap.timeline({ ease: 'power4.out' });
 
-      const timeline = anime.timeline({
-        duration: 500,
-        easing: 'easeOutExpo',
-      })
+      timeline.to('.overview-card, .social-media-card', { rotate: -20, duration: .2})
+      timeline.to('.overview-card, .social-media-card',
+          {
+            rotate: 0,
+            duration: .2,
+            onComplete: this.toggleDarkMode
+          }
+      )
 
-      timeline.add({
-        targets: ['.overview-card, .social-media-card'],
-        rotate: [
-          {value: '-15deg'},
-          {value: '15deg'}
-        ],
-        // complete: function (anime) {
-        //   // if (!this.isLight) {
-        //   //   body.classList.add('dark')
-        //   // } else {
-        //   //   body.classList.remove('dark')
-        //   // }
-        // }
+      // const timeline = anime.timeline({
+      //   duration: 1000,
+      //   easing: 'easeOutExpo',
+      // })
+      //
+      // timeline.add({
+      //   targets: ['.overview-card, .social-media-card'],
+      //   rotate: [
+      //     { value: '-15deg' },
+      //     { value: 0 }
+      //   ],
+      //   // complete: function (anime) {
+      //   //   // if (!this.isLight) {
+      //   //   //   body.classList.add('dark')
+      //   //   // } else {
+      //   //   //   body.classList.remove('dark')
+      //   //   // }
+      //   // }
+      //
+      // })
 
-      })
+      // timeline.add({
+      //   targets: ['.overview-card, .social-media-card'],
+      //   rotate: [
+      //     {value: '-15deg'},
+      //   ]
+      // })
 
-      timeline.add({
-        targets: ['.overview-card, .social-media-card'],
-        rotate: [
-          {value: '-15deg'},
-        ]
-      })
+    },
 
+    toggleDarkMode() {
+      const body = document.querySelector('body')
+
+      if (this.isLight) {
+        body.classList.remove('dark')
+      } else {
+        body.classList.add('dark')
+      }
     }
   }
 }
